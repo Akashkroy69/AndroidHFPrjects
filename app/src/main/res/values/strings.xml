@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RevisionProj1</string>
+    <string name="enter_soemething">Enter Soemething</string>
+    <string name="okButtonText">Ok!!</string>
+    <string name="beer_type">Beer Type</string>
+    <string name="beer_adviser_app">Beer Adviser App</string>
+    <string-array name="beerList">
+        <item>light</item>
+        <item>amber</item>
+        <item>red</item>
+        <item>brown</item>
+        <item>green</item>
+        <item>orange</item>
+    </string-array>
+</resources>
