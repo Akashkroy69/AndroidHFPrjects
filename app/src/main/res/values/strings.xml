@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">RevisionProj1</string>
-    <string name="enter_soemething">Enter Soemething</string>
-    <string name="okButtonText">Ok!!</string>
+    <string name="enter_email">To</string>
+    <string name="message_string">message</string>
+    <string name="okButtonText">send</string>
     <string name="beer_type">Beer Type</string>
     <string name="beer_adviser_app">Beer Adviser App</string>
     <string-array name="beerList">

@@ -14,18 +14,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 //        ids of views
-        val findBeerButton = findViewById<Button>(R.id.okButtonId)
-        val beerText = findViewById<TextView>(R.id.beerTypeTextId)
-        val spinner = findViewById<Spinner>(R.id.spinnerId)
-        val inputArea = findViewById<EditText>(R.id.inputTextId)
-        findBeerButton.setOnClickListener {
-//          val beer = spinner.selectedItem.toString() or following will work
-            val beer = "${spinner.selectedItem}"
-            beerText.text = beer
-//            in the input area string is not allowed, but the editable  is allowed
-            inputArea.text = Editable.Factory.getInstance().newEditable(beer)
+//        val findBeerButton = findViewById<Button>(R.id.okButtonId)
+//        val beerText = findViewById<TextView>(R.id.beerTypeTextId)
+//        val spinner = findViewById<Spinner>(R.id.spinnerId)
+//        val inputArea = findViewById<EditText>(R.id.inputTextId)
+//        findBeerButton.setOnClickListener {
+////          val beer = spinner.selectedItem.toString() or following will work
+//            val beer = "${spinner.selectedItem}"
+//            beerText.text = beer
+////            in the input area string is not allowed, but the editable  is allowed
+//            inputArea.text = Editable.Factory.getInstance().newEditable(beer)
 
-        }
+//        }
 
 
     }
