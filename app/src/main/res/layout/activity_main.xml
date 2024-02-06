@@ -6,10 +6,20 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        android:scaleType="center"
           android:src="@drawable/test_img"
 android:contentDescription="PhoneImage"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Buddy!!"
+        android:textSize="32dp"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"/>
 
 
 </FrameLayout>
