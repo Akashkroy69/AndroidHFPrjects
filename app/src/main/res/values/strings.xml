@@ -4,6 +4,9 @@
     <string name="okButtonText">Ok!!</string>
     <string name="beer_type">Beer Type</string>
     <string name="beer_adviser_app">Beer Adviser App</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="reset">reset</string>
     <string-array name="beerList">
         <item>light</item>
         <item>amber</item>
