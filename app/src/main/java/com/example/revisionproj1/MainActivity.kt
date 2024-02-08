@@ -1,32 +1,63 @@
 package com.example.revisionproj1
 
 import android.os.Bundle
-import android.text.Editable
+import android.os.SystemClock
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.Chronometer
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    lateinit var stopwatch:Chronometer
+    var running = false
+    var offset:Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        ids of views
-        val findBeerButton = findViewById<Button>(R.id.okButtonId)
-        val beerText = findViewById<TextView>(R.id.beerTypeTextId)
-        val spinner = findViewById<Spinner>(R.id.spinnerId)
-        val inputArea = findViewById<EditText>(R.id.inputTextId)
-        findBeerButton.setOnClickListener {
-//          val beer = spinner.selectedItem.toString() or following will work
-            val beer = "${spinner.selectedItem}"
-            beerText.text = beer
-//            in the input area string is not allowed, but the editable  is allowed
-            inputArea.text = Editable.Factory.getInstance().newEditable(beer)
+
+        stopwatch = findViewById<Chronometer>(R.id.chronometer)
+
+        val startButton = findViewById<Button>(R.id.start)
+        val pauseButton = findViewById<Button>(R.id.pause)
+        val resetButton = findViewById<Button>(R.id.reset)
+
+        startButton.setOnClickListener {
+            if(!running) {
+                running = true
+                setBaseTime()
+                stopwatch.start()
+            }
 
         }
 
+        pauseButton.setOnClickListener {
+            if(running){
+                saveOffset()
+                running = false
+                stopwatch.stop()
+
+            }
+
+        }
+
+        resetButton.setOnClickListener {
+            offset = 0
+            stopwatch.base = SystemClock.elapsedRealtime()-offset
+
+        }
+
+        }
+
+     fun setBaseTime(){
+         stopwatch.base = SystemClock.elapsedRealtime() - offset
+     }
+
+    fun saveOffset(){
+        offset = SystemClock.elapsedRealtime() - stopwatch.base
+    }
+
+  
+
+
 
     }
-}
