@@ -7,9 +7,9 @@ import android.widget.Chronometer
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    lateinit var stopwatch:Chronometer
-    var running = false
-    var offset:Long = 0
+    private lateinit var stopwatch:Chronometer
+    private var running = false
+    private var offset:Long = 0
 
 //    constants
     private val OFFSET_VALUE = "offset"
