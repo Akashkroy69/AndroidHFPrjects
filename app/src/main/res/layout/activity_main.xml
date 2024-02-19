@@ -8,28 +8,21 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-  <Chronometer
-      android:id="@+id/chronometer"
+
+  <EditText
+      android:id="@+id/editTextId"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:textSize="50dp"/>
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/start"
-        android:layout_margin="10dp"/>
-    <Button
-        android:id="@+id/pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pause"
-        android:layout_margin="10dp"/>
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/reset"
-        android:layout_margin="10dp"/>
+      android:hint="Enter something"/>
+  <Button
+      android:id="@+id/displayButtonId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="display"/>
+  <TextView
+      android:id="@+id/displayTextId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="---"/>
 
 </LinearLayout>
