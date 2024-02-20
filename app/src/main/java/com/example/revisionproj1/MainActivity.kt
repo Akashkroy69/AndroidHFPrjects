@@ -71,6 +71,27 @@ class MainActivity : AppCompatActivity() {
         offset = SystemClock.elapsedRealtime() - stopwatch.base
     }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+    override fun onRestart() {
+        super.onRestart()
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+    }
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putLong(OFFSET_VALUE,offset)
         outState.putBoolean(RUNNING_STATUS,running)
