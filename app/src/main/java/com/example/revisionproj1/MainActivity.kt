@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.widget.Button
 import android.widget.Chronometer
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val RUNNING_STATUS = "running"
     private val BASE = "base"
 
+    var x: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
 //        till now the activity is not visible
         super.onCreate(savedInstanceState)
@@ -32,6 +34,9 @@ class MainActivity : AppCompatActivity() {
                 setBaseTime()
             }
         }
+        x = "in on create"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
+
 
         val startButton = findViewById<Button>(R.id.start)
         val pauseButton = findViewById<Button>(R.id.pause)
@@ -75,21 +80,29 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 //        it is called when  the activity is about to be visible
+        x = "in on start"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
     }
 
     override fun onResume() {
         super.onResume()
 //        when the user returns to the activity after getting paused
+        x = "in on resume"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
     }
 
     override fun onPause() {
         super.onPause()
 //        when another activity comes onto the foreground
+        x = "in on pause"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
 
     }
     override fun onRestart() {
         super.onRestart()
 //        when the activity becomes visible again after getting invisible, (after coming from onStop)
+        x = "in on restart"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
         if(running){
 //            running = true
             setBaseTime()
@@ -102,6 +115,8 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
 //        when the activity is not visible
 //        when the activity is not visible we need to pause the timer
+        x = "in on stop"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
         if(running){
             saveOffset()
             stopwatch.stop()
@@ -111,6 +126,8 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
 //        when the activity is getting destroyed
+        x = "in on destroy"
+        Toast.makeText(applicationContext,x,Toast.LENGTH_SHORT).show()
     }
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putLong(OFFSET_VALUE,offset)
