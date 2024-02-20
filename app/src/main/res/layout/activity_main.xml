@@ -31,5 +31,10 @@
         android:layout_height="wrap_content"
         android:text="@string/reset"
         android:layout_margin="10dp"/>
+  <ImageView
+      android:id="@+id/imageId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/activity_lifecycle"/>
 
 </LinearLayout>

@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val BASE = "base"
 
     override fun onCreate(savedInstanceState: Bundle?) {
+//        till now the activity is not visible
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         stopwatch = findViewById<Chronometer>(R.id.chronometer)
@@ -73,24 +74,43 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+//        it is called when  the activity is about to be visible
     }
 
     override fun onResume() {
         super.onResume()
+//        when the user returns to the activity after getting paused
     }
 
     override fun onPause() {
         super.onPause()
+//        when another activity comes onto the foreground
+
     }
     override fun onRestart() {
         super.onRestart()
+//        when the activity becomes visible again after getting invisible, (after coming from onStop)
+        if(running){
+//            running = true
+            setBaseTime()
+            stopwatch.start()
+            offset = 0
+        }
     }
 
     override fun onStop() {
         super.onStop()
+//        when the activity is not visible
+//        when the activity is not visible we need to pause the timer
+        if(running){
+            saveOffset()
+            stopwatch.stop()
+        }
+
     }
     override fun onDestroy() {
         super.onDestroy()
+//        when the activity is getting destroyed
     }
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putLong(OFFSET_VALUE,offset)
