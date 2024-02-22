@@ -14,7 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:name="com.example.revisionproj1.WelcomeFragment"/>
-
+    <FrameLayout
+        android:id="@+id/fragmentContainer2Id"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
 
 
 </LinearLayout>

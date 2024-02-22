@@ -14,4 +14,6 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="Welcome_fragment">Welcome Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_fragment_2">Welcome Fragment 2</string>
 </resources>

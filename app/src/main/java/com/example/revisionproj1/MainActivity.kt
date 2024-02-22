@@ -17,12 +17,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 //        adding the fragment: getting the fragment manager and fragment transactor
-//        val fragmentManager:FragmentManager = supportFragmentManager
-//        val fragmentTransactor: FragmentTransaction = fragmentManager.beginTransaction()
-//        val welcomeFragment = WelcomeFragment()
-//
-//        fragmentTransactor.add(R.id.fragmentContainerId,welcomeFragment)
-//        fragmentTransactor.commit()
+
+        val fragmentManager:FragmentManager = supportFragmentManager
+        val fragmentTransactor:FragmentTransaction = fragmentManager.beginTransaction()
+        val welcomeFragment2 = WelcomeFragment2()
+
+        fragmentTransactor.add(R.id.fragmentContainer2Id,welcomeFragment2)
+        fragmentTransactor.commit()
 
         }
 
