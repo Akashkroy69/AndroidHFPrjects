@@ -12,4 +12,6 @@
         <item>green</item>
         <item>orange</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Welcome_fragment">Welcome Fragment</string>
 </resources>

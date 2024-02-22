@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,8 +16,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        adding the fragment: getting the fragment manager and fragment transactor
+        val fragmentManager:FragmentManager = supportFragmentManager
+        val fragmentTransactor: FragmentTransaction = fragmentManager.beginTransaction()
+        val welcomeFragment = WelcomeFragment()
+
+        fragmentTransactor.add(R.id.fragmentContainerId,welcomeFragment)
+        fragmentTransactor.commit()
+
         }
 
 
-    }
 }
