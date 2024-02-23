@@ -15,4 +15,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="Welcome_fragment">Welcome Fragment</string>
     <string name="send">send</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="write_a_message">Write a message</string>
 </resources>

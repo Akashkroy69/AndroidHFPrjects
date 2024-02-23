@@ -13,6 +13,7 @@
         android:id="@+id/fragmentContainerId"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:background="@color/white"
         android:name="com.example.revisionproj1.WelcomeFragment"/>
 
 

@@ -3,19 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".WelcomeFragment">
+    tools:context=".MessageFragment">
 
-
-    <TextView
+<!--     TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/writeMessageId"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:textColor="@color/white"
-        android:background="@color/red"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/Welcome_fragment" />
+        android:text="@string/write_a_message" />
     <Button
+        android:id="@+id/sendButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
