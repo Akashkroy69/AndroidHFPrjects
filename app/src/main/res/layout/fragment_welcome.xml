@@ -16,9 +16,10 @@
         android:gravity="center"
         android:text="@string/Welcome_fragment" />
     <Button
+        android:id="@+id/startButtId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/send"/>
+        android:text="@string/start"/>
 
 </LinearLayout>

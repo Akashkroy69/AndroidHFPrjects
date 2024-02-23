@@ -17,4 +17,5 @@
     <string name="send">send</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="write_a_message">Write a message</string>
+    <string name="start">start</string>
 </resources>
