@@ -33,10 +33,15 @@ class WelcomeFragment : Fragment() {
 
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_welcome, container, false)
+//        this doesn't work as it might be possible that view is not created here and we are trying to find
+//        navcontroller
+//        while both approaches might seem similar, the timing of when the NavController object is obtained
+//        can affect the behavior and reliability of your navigation logic. It's generally safer to obtain
+//        the NavController object directly inside the OnClickListener lambda or other relevant callback
+//        functions to ensure that it's obtained when needed.
 //        val navController  = view.findNavController()
 
         val startButton = view.findViewById<Button>(R.id.startButtId)
-//        navController.navigate(R.id.action_welcomeFragment_to_messageFragment)
 
         startButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_welcomeFragment_to_messageFragment)
