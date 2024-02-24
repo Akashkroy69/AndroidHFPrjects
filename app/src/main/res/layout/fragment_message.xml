@@ -7,6 +7,13 @@
     tools:context=".MessageFragment">
 
 <!--     TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/message_fragment" />
     <EditText
         android:id="@+id/writeMessageId"
         android:layout_width="match_parent"

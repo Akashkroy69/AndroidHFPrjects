@@ -5,15 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.findNavController
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MessageFragment.newInstance] factory method to
+ * Use the [EncrytedFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MessageFragment : Fragment() {
+class EncrytedFragment : Fragment() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -23,11 +22,7 @@ class MessageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_message, container, false)
-        val nextbutt = view.findViewById<Button>(R.id.sendButtonId)
-        nextbutt.setOnClickListener {
-            view.findNavController().navigate((R.id.action_messageFragment_to_encrytedFragment))
-        }
+        val view = inflater.inflate(R.layout.fragment_encryted, container, false)
 
         return view
     }

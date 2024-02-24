@@ -14,9 +14,20 @@
             android:id="@+id/action_welcomeFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/messageFragment"
         android:name="com.example.revisionproj1.MessageFragment"
         android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageFragment_to_encrytedFragment"
+            app:destination="@id/encrytedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/encrytedFragment"
+        android:name="com.example.revisionproj1.EncrytedFragment"
+        android:label="fragment_encryted"
+        tools:layout="@layout/fragment_encryted" />
 </navigation>
