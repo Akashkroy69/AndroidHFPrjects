@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_messageFragment_to_encrytedFragment"
             app:destination="@id/encrytedFragment" />
+        <argument
+            android:name="message"
+            app:argType="string"/>
     </fragment>
 
     <fragment

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import androidx.navigation.findNavController
 
 /**
@@ -25,8 +26,11 @@ class MessageFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_message, container, false)
         val nextbutt = view.findViewById<Button>(R.id.sendButtonId)
+
+        val message = view.findViewById<EditText>(R.id.writeMessageId).text.toString()
         nextbutt.setOnClickListener {
             view.findNavController().navigate((R.id.action_messageFragment_to_encrytedFragment))
+
         }
 
         return view
