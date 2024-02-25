@@ -3,44 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/black"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/helloTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/beer_adviser_app"
-        android:textColor="@color/red"
-        android:textSize="24sp" />
-    <Spinner
-        android:id="@+id/spinnerId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="center"
-        android:entries="@array/beerList"
-        />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerId"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/white"
 
-    <EditText
-        android:id="@+id/inputTextId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_soemething" />
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph ="@navigation/nav_graph"
+        app:defaultNavHost="true"/>
 
-    <Button
-        android:id="@+id/okButtonId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/okButtonText" />
-    <TextView
-        android:id="@+id/beerTypeTextId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/beer_type"
-        android:layout_margin="16dp"/>
+
 
 </LinearLayout>
