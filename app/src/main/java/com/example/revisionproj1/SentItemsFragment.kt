@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 class SentItemsFragment : Fragment() {
 
@@ -18,6 +20,10 @@ class SentItemsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sent_items, container, false)
+        val view= inflater.inflate(R.layout.fragment_sent_items, container, false)
+        view.findViewById<Button>(R.id.sentToHelp).setOnClickListener {
+            view.findNavController().navigate(R.id.action_sentItemsFragment_to_helpFragment)
+        }
+        return view
     }
 }
