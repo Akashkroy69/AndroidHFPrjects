@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inboxFragment">
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.example.revisionproj1.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox" >
+        <action
+            android:id="@+id/action_inboxFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.revisionproj1.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+</navigation>
