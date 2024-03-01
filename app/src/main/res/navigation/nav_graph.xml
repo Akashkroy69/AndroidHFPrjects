@@ -8,15 +8,15 @@
     <fragment
         android:id="@+id/inboxFragment"
         android:name="com.example.revisionproj1.InboxFragment"
-        android:label="fragment_inbox"
+        android:label="Inbox"
         tools:layout="@layout/fragment_inbox" >
         <action
             android:id="@+id/action_inboxFragment_to_helpFragment"
-            app:destination="@id/helpFragment" />
+            app:destination="@id/helpFragment"/>
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
         android:name="com.example.revisionproj1.HelpFragment"
-        android:label="fragment_help"
+        android:label="Help"
         tools:layout="@layout/fragment_help" />
 </navigation>
