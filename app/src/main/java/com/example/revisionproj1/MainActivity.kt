@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,13 @@ class MainActivity : AppCompatActivity() {
         val builder = AppBarConfiguration.Builder(navController.graph)
         val appBarConfiguration = builder.build()
         toolbar.setupWithNavController(navController,appBarConfiguration)
+
+//        code for Bottom bar View
+        val bottombar = findViewById<BottomNavigationView>(R.id.bottomNavBarId)
+        bottombar.setupWithNavController(navController)
+//        bottombar.setOnItemSelectedListener {menuItem->
+//
+//        }
 
         }
 
